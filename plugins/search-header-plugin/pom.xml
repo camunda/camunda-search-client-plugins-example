@@ -17,7 +17,7 @@
   <dependencies>
     <dependency>
       <groupId>io.camunda</groupId>
-      <artifactId>camunda-search-plugins</artifactId>
+      <artifactId>camunda-search-client-plugin</artifactId>
       <version>${camunda.version}</version>
       <scope>provided</scope>
     </dependency>
