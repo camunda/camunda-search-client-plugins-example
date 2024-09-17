@@ -16,9 +16,12 @@ define configuration properties as described on the [official documentation page
 
 ### Quickstart
 
-See sample docker files for [Elastic Search](./docker-example/docker-compose.core.elasticsearch.yaml)
-and [Open Search](./docker-example/docker-compose.core.opensearch.yaml).
+See sample docker files for [ElasticSearch and OpenSearch](./docker-example/docker-compose.elasticsearch.yaml).
 
 For every component, make sure to change configuration properties and specify the correct path to the JAR file in the `volumes` section.
 
-Once correct values set, run with `docker-compose -f <camunda cluster YAML file> up`.
+To run ElasticSearch, make sure that property `SEARCH_DB=elasticsearch` is set in the [.env](./docker-example/.env), then run `docker-compose -f docker-compose.yaml up`.
+
+To run ElasticSearch, make sure that property `SEARCH_DB=opensearch` is set in the [.env](./docker-example/.env), then run `docker-compose -f docker-compose.yaml --profile opensearch up`.
+
+You may also need to uncomment ElasticSearch or OpenSearch related properties in the Docker Compose YAML file.
